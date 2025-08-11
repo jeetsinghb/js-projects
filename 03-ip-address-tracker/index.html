@@ -1,0 +1,93 @@
+<!--
+██████╗  ██████╗ ███╗   ███╗██╗███╗   ██╗██╗ ██████╗██╗
+██╔══██╗██╔═══██╗████╗ ████║██║████╗  ██║██║██╔════╝██║
+██║  ██║██║   ██║██╔████╔██║██║██╔██╗ ██║██║██║     ██║
+██║  ██║██║   ██║██║╚██╔╝██║██║██║╚██╗██║██║██║     ╚═╝
+██████╔╝╚██████╔╝██║ ╚═╝ ██║██║██║ ╚████║██║╚██████╗██╗
+╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═╝╚═╝  ╚═══╝╚═╝ ╚═════╝╚═╝
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Charset and Viewport -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- Page Title -->
+    <title>IP Address Tracker</title>
+
+    <!-- Fonts and Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Favicon -->
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+  </head>
+
+  <body>
+    <main>
+      <section>
+        <div class="container">
+          <h1 class="page_title">IP Address Tracker</h1>
+          <h3 class="page_subtitle">Find out the geographical details of any IP address</h3>
+          <div class="input_wrapper">
+            <form id="input_form">
+              <input
+                type="search"
+                id="input_field"
+                class="input_box"
+                autocomplete="off"
+                placeholder="Search for any IP address"
+                required
+              />
+              <button id="lookup_btn" type="submit" class="input_btn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 -960 960 960"
+                  width="24px"
+                  fill="#333333"
+                >
+                  <path
+                    d="m517.85-480-184-184L376-706.15 602.15-480 376-253.85 333.85-296l184-184Z"
+                  />
+                </svg>
+              </button>
+            </form>
+            <p class="example_text">Example: 49.36.121.114</p>
+          </div>
+          <div class="loader" id="loader" style="display: none"></div>
+          <div class="data_blocks">
+            <div class="data_block">
+              <h6>IP Address</h6>
+              <h4 id="ip">-</h4>
+            </div>
+            <div class="data_block">
+              <h6>Location</h6>
+              <h4 id="location">-</h4>
+            </div>
+            <div class="data_block">
+              <h6>Timezone</h6>
+              <h4 id="timezone">-</h4>
+            </div>
+            <div class="data_block">
+              <h6>ISP</h6>
+              <h4 id="isp">-</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="./assets/js/index.js"></script>
+  </body>
+</html>
